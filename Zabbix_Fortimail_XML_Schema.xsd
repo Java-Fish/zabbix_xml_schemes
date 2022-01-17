@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+         <!-- XML Schema Generated from XML Document on Mon Jan 17 2022 14:34:10 GMT+0100 (Mitteleuropäische Normalzeit) -->
+         <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+         <xs:element name="zabbix_export">
+               <xs:complexType>
+                     <xs:sequence>
+                           <xs:element name="version" type="xs:double"></xs:element>
+                           <xs:element name="date" type="xs:dateTime"></xs:element>
+                           <xs:element name="groups">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="group" maxOccurs="unbounded">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="name" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="templates">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="template">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="template" type="xs:string"></xs:element>
+                                                               <xs:element name="name" type="xs:string"></xs:element>
+                                                               <xs:element name="description"></xs:element>
+                                                               <xs:element name="groups">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="group" maxOccurs="unbounded">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="name" type="xs:string"></xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="applications">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="application" maxOccurs="unbounded">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="name" type="xs:string"></xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="items">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="item" maxOccurs="unbounded">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="name" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="type" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="snmp_community" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="snmp_oid" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="key" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="delay" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="history" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="trends" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="status" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="value_type" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="allowed_hosts"></xs:element>
+                                                                                                   <xs:element name="units" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="snmpv3_contextname"></xs:element>
+                                                                                                   <xs:element name="snmpv3_securityname"></xs:element>
+                                                                                                   <xs:element name="snmpv3_securitylevel" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="snmpv3_authprotocol" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="snmpv3_authpassphrase"></xs:element>
+                                                                                                   <xs:element name="snmpv3_privprotocol" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="snmpv3_privpassphrase"></xs:element>
+                                                                                                   <xs:element name="params"></xs:element>
+                                                                                                   <xs:element name="ipmi_sensor"></xs:element>
+                                                                                                   <xs:element name="authtype" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="username"></xs:element>
+                                                                                                   <xs:element name="password"></xs:element>
+                                                                                                   <xs:element name="publickey"></xs:element>
+                                                                                                   <xs:element name="privatekey"></xs:element>
+                                                                                                   <xs:element name="port"></xs:element>
+                                                                                                   <xs:element name="description"></xs:element>
+                                                                                                   <xs:element name="inventory_link" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="applications">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element name="application">
+                                                                                                                           <xs:complexType>
+                                                                                                                                 <xs:sequence>
+                                                                                                                                       <xs:element name="name" type="xs:string"></xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                           </xs:complexType>
+                                                                                                                     </xs:element>
+                                                                                                               </xs:sequence>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                                   <xs:element name="valuemap"></xs:element>
+                                                                                                   <xs:element name="logtimefmt"></xs:element>
+                                                                                                   <xs:element name="preprocessing"></xs:element>
+                                                                                                   <xs:element name="jmx_endpoint"></xs:element>
+                                                                                                   <xs:element name="timeout" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="url"></xs:element>
+                                                                                                   <xs:element name="query_fields"></xs:element>
+                                                                                                   <xs:element name="posts"></xs:element>
+                                                                                                   <xs:element name="status_codes" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="follow_redirects" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="post_type" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="http_proxy"></xs:element>
+                                                                                                   <xs:element name="headers"></xs:element>
+                                                                                                   <xs:element name="retrieve_mode" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="request_method" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="output_format" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="allow_traps" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="ssl_cert_file"></xs:element>
+                                                                                                   <xs:element name="ssl_key_file"></xs:element>
+                                                                                                   <xs:element name="ssl_key_password"></xs:element>
+                                                                                                   <xs:element name="verify_peer" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="verify_host" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="master_item"></xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="discovery_rules">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="discovery_rule">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="name" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="type" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="snmp_community" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="snmp_oid" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="key" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="delay" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="status" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="allowed_hosts"></xs:element>
+                                                                                                   <xs:element name="snmpv3_contextname"></xs:element>
+                                                                                                   <xs:element name="snmpv3_securityname"></xs:element>
+                                                                                                   <xs:element name="snmpv3_securitylevel" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="snmpv3_authprotocol" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="snmpv3_authpassphrase"></xs:element>
+                                                                                                   <xs:element name="snmpv3_privprotocol" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="snmpv3_privpassphrase"></xs:element>
+                                                                                                   <xs:element name="params"></xs:element>
+                                                                                                   <xs:element name="ipmi_sensor"></xs:element>
+                                                                                                   <xs:element name="authtype" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="username"></xs:element>
+                                                                                                   <xs:element name="password"></xs:element>
+                                                                                                   <xs:element name="publickey"></xs:element>
+                                                                                                   <xs:element name="privatekey"></xs:element>
+                                                                                                   <xs:element name="port"></xs:element>
+                                                                                                   <xs:element name="filter">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element name="evaltype" type="xs:int"></xs:element>
+                                                                                                                     <xs:element name="formula"></xs:element>
+                                                                                                                     <xs:element name="conditions"></xs:element>
+                                                                                                               </xs:sequence>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                                   <xs:element name="lifetime" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="description"></xs:element>
+                                                                                                   <xs:element name="item_prototypes">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element name="item_prototype" maxOccurs="unbounded">
+                                                                                                                           <xs:complexType>
+                                                                                                                                 <xs:sequence>
+                                                                                                                                       <xs:element name="name" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="type" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="snmp_community" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="snmp_oid" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="key" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="delay" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="history" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="trends" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="status" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="value_type" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="allowed_hosts"></xs:element>
+                                                                                                                                       <xs:element name="units"></xs:element>
+                                                                                                                                       <xs:element name="snmpv3_contextname"></xs:element>
+                                                                                                                                       <xs:element name="snmpv3_securityname"></xs:element>
+                                                                                                                                       <xs:element name="snmpv3_securitylevel" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="snmpv3_authprotocol" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="snmpv3_authpassphrase"></xs:element>
+                                                                                                                                       <xs:element name="snmpv3_privprotocol" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="snmpv3_privpassphrase"></xs:element>
+                                                                                                                                       <xs:element name="params"></xs:element>
+                                                                                                                                       <xs:element name="ipmi_sensor"></xs:element>
+                                                                                                                                       <xs:element name="authtype" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="username"></xs:element>
+                                                                                                                                       <xs:element name="password"></xs:element>
+                                                                                                                                       <xs:element name="publickey"></xs:element>
+                                                                                                                                       <xs:element name="privatekey"></xs:element>
+                                                                                                                                       <xs:element name="port"></xs:element>
+                                                                                                                                       <xs:element name="description"></xs:element>
+                                                                                                                                       <xs:element name="inventory_link" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="applications">
+                                                                                                                                             <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                         <xs:element name="application">
+                                                                                                                                                               <xs:complexType>
+                                                                                                                                                                     <xs:sequence>
+                                                                                                                                                                           <xs:element name="name" type="xs:string"></xs:element>
+                                                                                                                                                                     </xs:sequence>
+                                                                                                                                                               </xs:complexType>
+                                                                                                                                                         </xs:element>
+                                                                                                                                                   </xs:sequence>
+                                                                                                                                             </xs:complexType>
+                                                                                                                                       </xs:element>
+                                                                                                                                       <xs:element name="valuemap"></xs:element>
+                                                                                                                                       <xs:element name="logtimefmt"></xs:element>
+                                                                                                                                       <xs:element name="preprocessing"></xs:element>
+                                                                                                                                       <xs:element name="jmx_endpoint"></xs:element>
+                                                                                                                                       <xs:element name="timeout" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="url"></xs:element>
+                                                                                                                                       <xs:element name="query_fields"></xs:element>
+                                                                                                                                       <xs:element name="posts"></xs:element>
+                                                                                                                                       <xs:element name="status_codes" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="follow_redirects" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="post_type" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="http_proxy"></xs:element>
+                                                                                                                                       <xs:element name="headers"></xs:element>
+                                                                                                                                       <xs:element name="retrieve_mode" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="request_method" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="output_format" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="allow_traps" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="ssl_cert_file"></xs:element>
+                                                                                                                                       <xs:element name="ssl_key_file"></xs:element>
+                                                                                                                                       <xs:element name="ssl_key_password"></xs:element>
+                                                                                                                                       <xs:element name="verify_peer" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="verify_host" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="application_prototypes"></xs:element>
+                                                                                                                                       <xs:element name="master_item"></xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                           </xs:complexType>
+                                                                                                                     </xs:element>
+                                                                                                               </xs:sequence>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                                   <xs:element name="trigger_prototypes"></xs:element>
+                                                                                                   <xs:element name="graph_prototypes"></xs:element>
+                                                                                                   <xs:element name="host_prototypes"></xs:element>
+                                                                                                   <xs:element name="jmx_endpoint"></xs:element>
+                                                                                                   <xs:element name="timeout" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="url"></xs:element>
+                                                                                                   <xs:element name="query_fields"></xs:element>
+                                                                                                   <xs:element name="posts"></xs:element>
+                                                                                                   <xs:element name="status_codes" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="follow_redirects" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="post_type" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="http_proxy"></xs:element>
+                                                                                                   <xs:element name="headers"></xs:element>
+                                                                                                   <xs:element name="retrieve_mode" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="request_method" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="allow_traps" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="ssl_cert_file"></xs:element>
+                                                                                                   <xs:element name="ssl_key_file"></xs:element>
+                                                                                                   <xs:element name="ssl_key_password"></xs:element>
+                                                                                                   <xs:element name="verify_peer" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="verify_host" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="lld_macro_paths"></xs:element>
+                                                                                                   <xs:element name="preprocessing"></xs:element>
+                                                                                                   <xs:element name="master_item"></xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="httptests"></xs:element>
+                                                               <xs:element name="macros">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="macro" maxOccurs="unbounded">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="macro" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="value" type="xs:int"></xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="templates"></xs:element>
+                                                               <xs:element name="screens"></xs:element>
+                                                               <xs:element name="tags"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="triggers">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="trigger" maxOccurs="unbounded">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="expression" type="xs:string"></xs:element>
+                                                               <xs:element name="recovery_mode" type="xs:int"></xs:element>
+                                                               <xs:element name="recovery_expression"></xs:element>
+                                                               <xs:element name="name" type="xs:string"></xs:element>
+                                                               <xs:element name="correlation_mode" type="xs:int"></xs:element>
+                                                               <xs:element name="correlation_tag"></xs:element>
+                                                               <xs:element name="url"></xs:element>
+                                                               <xs:element name="status" type="xs:int"></xs:element>
+                                                               <xs:element name="priority" type="xs:int"></xs:element>
+                                                               <xs:element name="description" type="xs:string"></xs:element>
+                                                               <xs:element name="type" type="xs:int"></xs:element>
+                                                               <xs:element name="manual_close" type="xs:int"></xs:element>
+                                                               <xs:element name="dependencies"></xs:element>
+                                                               <xs:element name="tags"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="value_maps">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="value_map">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="name" type="xs:string"></xs:element>
+                                                               <xs:element name="mappings">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="mapping" maxOccurs="unbounded">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="value" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="newvalue" type="xs:string"></xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                     </xs:sequence>
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>

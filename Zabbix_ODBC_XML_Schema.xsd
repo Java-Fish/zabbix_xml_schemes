@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+         <!-- XML Schema Generated from XML Document on Mon Jan 17 2022 14:39:16 GMT+0100 (Mitteleuropäische Normalzeit) -->
+         <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+         <xs:element name="zabbix_export">
+               <xs:complexType>
+                     <xs:sequence>
+                           <xs:element name="version" type="xs:int"></xs:element>
+                           <xs:element name="date" type="xs:dateTime"></xs:element>
+                           <xs:element name="groups">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="group">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="name" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="templates">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="template">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="template" type="xs:string"></xs:element>
+                                                               <xs:element name="name" type="xs:string"></xs:element>
+                                                               <xs:element name="description" type="xs:string"></xs:element>
+                                                               <xs:element name="groups">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="group">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="name" type="xs:string"></xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="applications">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="application">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="name" type="xs:string"></xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="items">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="item" maxOccurs="unbounded">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="name" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="type" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="snmp_community"></xs:element>
+                                                                                                   <xs:element name="multiplier" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="snmp_oid"></xs:element>
+                                                                                                   <xs:element name="key" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="delay" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="history" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="trends" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="status" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="value_type" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="allowed_hosts"></xs:element>
+                                                                                                   <xs:element name="units" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="delta" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="snmpv3_contextname"></xs:element>
+                                                                                                   <xs:element name="snmpv3_securityname"></xs:element>
+                                                                                                   <xs:element name="snmpv3_securitylevel" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="snmpv3_authprotocol" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="snmpv3_authpassphrase"></xs:element>
+                                                                                                   <xs:element name="snmpv3_privprotocol" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="snmpv3_privpassphrase"></xs:element>
+                                                                                                   <xs:element name="formula" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="delay_flex"></xs:element>
+                                                                                                   <xs:element name="params" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="ipmi_sensor"></xs:element>
+                                                                                                   <xs:element name="data_type" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="authtype" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="username" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="password" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="publickey"></xs:element>
+                                                                                                   <xs:element name="privatekey"></xs:element>
+                                                                                                   <xs:element name="port"></xs:element>
+                                                                                                   <xs:element name="description"></xs:element>
+                                                                                                   <xs:element name="inventory_link" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="applications">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element name="application">
+                                                                                                                           <xs:complexType>
+                                                                                                                                 <xs:sequence>
+                                                                                                                                       <xs:element name="name" type="xs:string"></xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                           </xs:complexType>
+                                                                                                                     </xs:element>
+                                                                                                               </xs:sequence>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                                   <xs:element name="valuemap"></xs:element>
+                                                                                                   <xs:element name="logtimefmt"></xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="discovery_rules"></xs:element>
+                                                               <xs:element name="macros"></xs:element>
+                                                               <xs:element name="templates"></xs:element>
+                                                               <xs:element name="screens"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="triggers">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="trigger" maxOccurs="unbounded">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="expression" type="xs:string"></xs:element>
+                                                               <xs:element name="name" type="xs:string"></xs:element>
+                                                               <xs:element name="url"></xs:element>
+                                                               <xs:element name="status" type="xs:int"></xs:element>
+                                                               <xs:element name="priority" type="xs:int"></xs:element>
+                                                               <xs:element name="description" type="xs:string"></xs:element>
+                                                               <xs:element name="type" type="xs:int"></xs:element>
+                                                               <xs:element name="dependencies"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="graphs">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="graph" maxOccurs="unbounded">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="name" type="xs:string"></xs:element>
+                                                               <xs:element name="width" type="xs:int"></xs:element>
+                                                               <xs:element name="height" type="xs:int"></xs:element>
+                                                               <xs:element name="yaxismin" type="xs:int"></xs:element>
+                                                               <xs:element name="yaxismax" type="xs:int"></xs:element>
+                                                               <xs:element name="show_work_period" type="xs:int"></xs:element>
+                                                               <xs:element name="show_triggers" type="xs:int"></xs:element>
+                                                               <xs:element name="type" type="xs:int"></xs:element>
+                                                               <xs:element name="show_legend" type="xs:int"></xs:element>
+                                                               <xs:element name="show_3d" type="xs:int"></xs:element>
+                                                               <xs:element name="percent_left" type="xs:int"></xs:element>
+                                                               <xs:element name="percent_right" type="xs:int"></xs:element>
+                                                               <xs:element name="ymin_type_1" type="xs:int"></xs:element>
+                                                               <xs:element name="ymax_type_1" type="xs:int"></xs:element>
+                                                               <xs:element name="ymin_item_1" type="xs:int"></xs:element>
+                                                               <xs:element name="ymax_item_1" type="xs:int"></xs:element>
+                                                               <xs:element name="graph_items">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="graph_item">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="sortorder" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="drawtype" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="color" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="yaxisside" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="calc_fnc" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="type" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="item">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element name="host" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="key" type="xs:string"></xs:element>
+                                                                                                               </xs:sequence>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                     </xs:sequence>
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>
